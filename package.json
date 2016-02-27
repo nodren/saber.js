@@ -1,0 +1,12 @@
+{
+  "name": "react-server-example",
+  "version": "1.0.0",
+  "description": "An exmaple react app",
+  "repository": "N/A",
+  "main": "index.js",
+  "author": "Ben Rogers",
+  "license": "BSG",
+  "devDependencies": {
+    "react": "^0.14.7"
+  }
+}
