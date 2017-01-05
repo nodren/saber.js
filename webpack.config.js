@@ -21,7 +21,10 @@ module.exports = {
     ],
     resolve: {
         alias: {
-            'sber': path.resolve(__dirname, './sber')
+            'frontend': path.resolve(__dirname, './frontend'),
+            'backend': path.resolve(__dirname, './frontend'),
+            'shared': path.resolve(__dirname, './frontend'),
+            'saber': path.resolve(__dirname, './saber'),
         },
         extensions:['', '.webpack.js', '.web.js', '.jsx', '.js', '.json']
     },
@@ -30,8 +33,20 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loaders: ['babel'],
-            }
-        ]
-    }
+                loader: 'babel-loader',
+                query: {
+                    presets: [
+                        'es2017',
+                        'es2016',
+                        'es2015',
+                        'stage-0',
+                        'react',
+                    ],
+                    plugins: [
+                        'transform-decorators-legacy',
+                    ],
+                },
+            },
+        ],
+    },
 };

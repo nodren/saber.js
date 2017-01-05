@@ -1,9 +1,12 @@
 'use strict';
 import express from 'express';
+import bodyParser from 'body-parser';
 
 let expressObj = null;
 export function server() {
     expressObj = express();
+    expressObj.use(bodyParser.json());
+    expressObj.use(bodyParser.urlencoded({extended: false}));
     return expressObj;
 }
 export function listen() {

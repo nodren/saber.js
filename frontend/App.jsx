@@ -3,7 +3,7 @@ import React from 'react';
 import Match from 'react-router/Match'
 import Link from 'react-router/Link'
 
-export default class Main extends React.Component {
+export default class App extends React.Component {
     render() {
         return (
             <div>

@@ -1,9 +1,10 @@
+import 'babel-polyfill';
 import React from 'react';
 import { BrowserRouter } from 'react-router';
-import Main from './frontend/Main.jsx';
+import App from 'frontend/App';
 import ReactDom from 'react-dom';
 
 ReactDom.render(<BrowserRouter>
-    <Main />
+    <App />
 </BrowserRouter>, document.querySelector('#root'));
 
