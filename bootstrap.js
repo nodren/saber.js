@@ -1,4 +1,3 @@
-// import 'babel-polyfill';
 import 'app-module-path/register';
 import { addPath } from 'app-module-path';
 addPath(__dirname);
@@ -9,7 +8,7 @@ import routingMiddleware from 'saber/routingMiddleware';
 import { devMiddleware, hotMiddleware } from 'saber/webpackMiddleware';
 import rest from 'saber/rest';
 
-import Main from 'frontend/App';
+import App from 'frontend/App';
 import modelBootstrap from './model-bootstrap.js';
 import webpackConfig from './webpack.config.js';
 
@@ -18,5 +17,5 @@ app.use(devMiddleware(webpackConfig));
 app.use(hotMiddleware(webpackConfig));
 rest.init(app);
 rest.loadModels(modelBootstrap);
-app.use(routingMiddleware(path.resolve(__dirname, './public/index.html'), Main));
+app.use(routingMiddleware(path.resolve(__dirname, './public/index.html'), App));
 listen();

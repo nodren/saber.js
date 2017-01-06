@@ -1,10 +1,14 @@
 {
 	"presets": [
+		["env", {
+			"targets": {
+				"node": true
+			},
+			"useBuiltIns": true
+		}],
 		"react"
 	],
 	"plugins": [
-		"transform-es2015-modules-commonjs",
-		"transform-decorators-legacy",
-		"transform-es2015-computed-properties"
+		"transform-decorators-legacy"
 	]
 }
