@@ -42,6 +42,7 @@ module.exports = {
 							},
 							useBuiltIns: true
 						}],
+						'stage-2',
 						'react',
 					],
 					plugins: [

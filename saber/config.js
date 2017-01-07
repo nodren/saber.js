@@ -2,9 +2,9 @@ import rc from 'rc';
 
 let defaults = {
 	database: {
-		database: "sber",
-		username: "sber",
-		password: "sber",
+		database: "saber",
+		username: "saber",
+		password: "saber",
 		options: {
 			host: "localhost",
 			port: "3306",

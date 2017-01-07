@@ -1,0 +1,10 @@
+{
+	"watch": [
+		"backend/*",
+		"saber/*",
+		"bootstrap.js",
+		"model-bootstrap.js"
+	],
+	"ext": "js json jsx",
+	"runOnChangeOnly": true
+}

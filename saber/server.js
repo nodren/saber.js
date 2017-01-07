@@ -21,10 +21,15 @@ export function server() {
 	return expressObj;
 }
 export function listen() {
-	expressObj.listen(3000, (err) => {
+	let server = expressObj.listen(3000, (err) => {
 		if (err) {
 			console.log(err);
 		}
 		console.info('==> Listening on port 3000.  Open up http://localhost:3000/ in your browser.');
 	});
+	process.once('SIGUSR2', () => {
+		server.close(() => {
+			process.kill(process.pid, 'SIGUSR2');
+		});
+	})
 }

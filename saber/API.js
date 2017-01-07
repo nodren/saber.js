@@ -1,6 +1,7 @@
 import { ajax } from 'jquery';
 
 class API {
+	model = null;
 	constructor(model = null) {
 		this.model = model;
 	}

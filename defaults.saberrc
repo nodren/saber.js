@@ -1,0 +1,13 @@
+{
+	"database": {
+		"database": "saber",
+		"username": "saber",
+		"password": "saber",
+		"options": {
+			"host": "localhost",
+			"port": "3306",
+			"dialect": "mysql"
+		}
+	},
+	"secret": "CHANGEME"
+}

@@ -6,7 +6,7 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "babel-node bootstrap.js"
+    "start": "nodemon bootstrap.js --exec babel-node"
   },
   "dependencies": {
     "app-module-path": "^2.1.0",
@@ -22,10 +22,10 @@
     "babel-preset-es2017": "^6.16.0",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "babel-preset-stage-1": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
     "body-parser": "^1.15.2",
     "connect-session-sequelize": "^4.1.0",
+    "easy-express-controllers": "^0.2.0",
     "epilogue": "^0.7.1",
     "express": "^4.14.0",
     "express-session": "^1.14.2",
