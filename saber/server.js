@@ -11,7 +11,7 @@ let expressObj = null;
 export function server() {
 	expressObj = express();
 	expressObj.use(bodyParser.json());
-	expressObj.use(bodyParser.urlencoded({extended: false}));
+	expressObj.use(bodyParser.urlencoded({extended: true}));
 	let sessionConfig = config.session;
 	if (sessionConfig.store == 'sequelize') {
 		sessionConfig.store = new SequelizeStore({db: sequelize});
